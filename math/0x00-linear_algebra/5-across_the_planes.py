@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""Adition between two 2D matrices"""
+
+
 def add_matrices2D(mat1, mat2):
     """Adds two matrices element-wise
     Args:
