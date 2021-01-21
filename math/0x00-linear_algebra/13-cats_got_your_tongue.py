@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import numpy as np
 """Concatenate matrices"""
 
 
@@ -9,5 +10,4 @@ def np_cat(mat1, mat2, axis=0):
         mat1 ([int]): a list of elements
         mat2 ([int]): a list of elements
     """
-    import numpy as np
     return np.concatenate((mat1, mat2), axis)
