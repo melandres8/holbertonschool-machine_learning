@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """multiply matrices"""
+import numpy as np
 
 
 def np_matmul(mat1, mat2):
@@ -9,4 +10,4 @@ def np_matmul(mat1, mat2):
         mat1 ([int]): a list of elements
         mat2 ([int]): a list of elements
     """
-    return mat1.dot(mat2)
+    return np.matmul(mat1, mat2)
