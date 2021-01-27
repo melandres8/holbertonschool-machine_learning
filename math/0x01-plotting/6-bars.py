@@ -6,26 +6,21 @@ np.random.seed(5)
 fruit = np.random.randint(0, 20, (4,3))
 
 names = ['Farrah', 'Fred', 'Felicia']
-fruits = {
-    'apples': 'red',
-    'bananas': 'yellow',
-    'oranges': '#ff8000',
-    'peaches': '#ffe5b4'
-    }
+fruits = ['apples', 'bananas', 'oranges', 'peaches']
+colors = ['r', 'yellow', '#ff8000', '#ffe5b4']
 
-offset = [0, 0, 0]
+offset = np.zeros(3)
 
-for k, v in fruits.items():
-    for row in range(len(fruit)):
-        plt.bar(
-            np.arange(len(names)),
-            fruit[row],
-            0.5,
-            bottom=offset,
-            color=v,
-            label=k
-        )
-        offset += fruit[row]
+for i in range(len(fruit)):
+    plt.bar(
+        np.arange(len(names)),
+        fruit[i],
+        0.5,
+        bottom=offset,
+        color=colors[i],
+        label=fruits[i]
+    )
+    offset += fruit[i]
 
 plt.title('Number of Fruit per Person')
 plt.ylabel('Quantity of Fruit')
