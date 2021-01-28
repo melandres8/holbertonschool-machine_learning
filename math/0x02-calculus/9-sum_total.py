@@ -5,6 +5,6 @@
 def summation_i_squared(n):
     """Summation"""
     if n > 0 and isinstance(n, int):
-        return int(n * 11)
+        return n * 11
     else:
         return None
