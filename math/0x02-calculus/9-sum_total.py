@@ -5,6 +5,6 @@
 def summation_i_squared(n):
     """Summation"""
     if n > 0 and isinstance(n, int):
-        return int(((n ** 2 * 2 + 5) * 2) / 2)
+        return int(n * (n + 1) * (2 * n + 1) / 6)
     else:
         return None
