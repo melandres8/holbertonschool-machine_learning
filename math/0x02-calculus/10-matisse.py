@@ -4,7 +4,7 @@
 
 def poly_derivative(poly):
     """Derivative func"""
-    if poly == 1:
+    if len(poly) == 1:
         return [0]
     elif not isinstance(poly, list) or len(poly) == 0:
         return None
