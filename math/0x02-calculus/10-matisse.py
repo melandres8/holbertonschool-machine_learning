@@ -4,7 +4,7 @@
 
 def poly_derivative(poly):
     """Derivative func"""
-    if poly != 0:
-        return [poly[i] * i for i in range(1, len(poly))]
-    else:
+    if poly == 0:
         return [0]
+    else:
+        return [poly[i] * i for i in range(1, len(poly))]
