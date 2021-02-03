@@ -22,17 +22,36 @@ class Poisson:
         Calculates the value of the PMF for
         a given number of “successes”
         """
+        import math
         if not isinstance(k, int):
             k = int(k)
         if k < 0:
             return 0
 
         result = 0
-        factorial = 1
-
-        for x in range(1, k + 1):
-            factorial *= x
+        factorial = math.factorial(k)
 
         result = ((2.7182818285 ** (-self.lambtha)) *
                   (self.lambtha ** k)) / factorial
+        return result
+
+    def cdf(self, k):
+        """Cumulative Distribution Function.
+            Calculates the value of the CDF for
+            a given number of “successes”
+        """
+        import math
+        if not isinstance(k, int):
+            k = int(k)
+        if k < 0:
+            return 0
+        
+        result = 0
+        suma = 0
+
+        for i in range(k + 1):
+            factorial = math.factorial(i)
+            suma += (self.lambtha ** i) / factorial
+
+        result = (2.7182818285 ** (-self.lambtha)) * suma
         return result
