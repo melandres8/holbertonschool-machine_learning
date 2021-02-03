@@ -23,8 +23,20 @@ class Exponential:
         for a given time period
         """
         if x < 0:
-            return 0
+            result = 0
+        else:
+            result = self.lambtha * 2.7182818285 ** (-self.lambtha * x)
 
-        result = self.lambtha * 2.7182818285 ** (-self.lambtha * x)
+        return result
+
+    def cdf(self, x):
+        """
+        Calculates the value of the CDF
+        for a given time period
+        """
+        if x < 0:
+            result = 0
+        else:
+            result = 1 - 2.7182818285 ** (-self.lambtha * x)
 
         return result
