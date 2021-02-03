@@ -6,7 +6,7 @@ class Poisson:
     """Represents a poisson distribution"""
     def __init__(self, data=None, lambtha=1.):
         """Constructor method"""
-        if data == None:
+        if data is None:
             if lambtha <= 0:
                 raise ValueError("lambtha must be a positive value")
             self.lambtha = float(lambtha)
