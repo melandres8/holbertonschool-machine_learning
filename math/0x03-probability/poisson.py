@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import math
 """Initialize Poisson"""
 
 
@@ -22,7 +23,6 @@ class Poisson:
         Calculates the value of the PMF for
         a given number of “successes”
         """
-        import math
         if not isinstance(k, int):
             k = int(k)
         if k < 0:
@@ -40,12 +40,11 @@ class Poisson:
             Calculates the value of the CDF for
             a given number of “successes”
         """
-        import math
         if not isinstance(k, int):
             k = int(k)
         if k < 0:
             return 0
-        
+
         result = 0
         suma = 0
 
