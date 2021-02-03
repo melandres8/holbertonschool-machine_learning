@@ -22,8 +22,6 @@ class Exponential:
         Calculates the value of the PDF
         for a given time period
         """
-        if not isinstance(x, int):
-            x = int(x)
         if x < 0:
             return 0
 
