@@ -18,4 +18,4 @@ class Normal:
                 raise ValueError("data must contain multiple values")
             self.mean = float(sum(data) / len(data))
             summa = [(x - self.mean) ** 2 for x in data]
-            self.stddev = pow((sum(summa) / len(data)), .5)
+            self.stddev = pow((sum(summa) / len(data)), 0.5)
