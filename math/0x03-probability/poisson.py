@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import math
 """Initialize Poisson"""
 
 
@@ -29,7 +28,10 @@ class Poisson:
             return 0
 
         result = 0
-        factorial = math.factorial(k)
+        factorial = 1
+
+        for x in range(1, k + 1):
+            factorial *= x
 
         result = ((2.7182818285 ** (-self.lambtha)) *
                   (self.lambtha ** k)) / factorial
@@ -49,7 +51,9 @@ class Poisson:
         suma = 0
 
         for i in range(k + 1):
-            factorial = math.factorial(i)
+            factorial = 1
+            for x in range(1, i + 1):
+                factorial *= x
             suma += (self.lambtha ** i) / factorial
 
         result = (2.7182818285 ** (-self.lambtha)) * suma
