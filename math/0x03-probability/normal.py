@@ -35,3 +35,14 @@ class Normal:
         PDF for a given x-value"""
         return 1 / (self.stddev * (2 * 3.1415926536) ** 0.5) * \
             2.7182818285 ** (-(x - self.mean) ** 2 / (2 * self.stddev ** 2))
+
+    def erf(self, x):
+        """ER Function"""
+        er = (2 / (3.1415926536 ** 0.5)) * (x - (x ** 3) / 3 + (x ** 5) / 10
+                                            - (x ** 7) / 42 + (x ** 9) / 216)
+        return er
+
+    def cdf(self, x):
+        """Calculates the value of the
+        CDF for a given x-value"""
+        return 0.5 * (1 + self.erf(self.z_score(x) / (2 ** 0.5)))
