@@ -27,3 +27,23 @@ class Binomial:
             else:
                 self.n = int(mean / p)
             self.p = float(mean / self.n)
+
+    def pmf(self, k):
+        """
+        Calculates the value of the PMF
+        for a given number of "successes"
+        """
+        k = int(k)
+        if k < 0:
+            return 0
+
+        factn = factk = factnk = 1
+        for x in range(1, self.n + 1):
+            factn *= x
+        for x in range(1, k + 1):
+            factk *= x
+        for x in range(1, self.n - k + 1):
+            factnk *= x
+
+        return (factn / (factk * factnk)) * \
+            self.p ** k * (1 - self.p) ** (self.n - k)
