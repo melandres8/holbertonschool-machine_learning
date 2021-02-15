@@ -47,6 +47,7 @@ class Neuron:
         self.__A = sigmoid(Z)
         return self.__A
 
+
 def sigmoid(z):
     """Sigmoid Activation function"""
     return 1.0 / (1.0 + np.exp(-z))
