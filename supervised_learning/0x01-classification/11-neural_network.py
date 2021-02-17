@@ -65,8 +65,8 @@ class NeuralNetwork:
         return self.__A1, self.__A2
 
     def cost(self, Y, A):
-            """Calculates the cost of the
-            model using logistic regression"""
-            C = -np.sum((Y * np.log(A)) +
-                        ((1 - Y) * np.log(1.0000001 - A))) / Y.shape[1]
-            return C
+        """Calculates the cost of the
+        model using logistic regression"""
+        C = -np.sum((Y * np.log(A)) +
+                    ((1 - Y) * np.log(1.0000001 - A))) / Y.shape[1]
+        return C
